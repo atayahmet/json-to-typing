@@ -20,7 +20,7 @@
     "test": "tsdx test --coverage",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
     "lint": "tsdx lint",
-    "prepare": "tsdx build",
+    "prepare": "npm run build && npm test",
     "size": "size-limit",
     "analyze": "size-limit --why",
     "release": "standard-version"
