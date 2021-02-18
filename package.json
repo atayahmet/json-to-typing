@@ -26,6 +26,16 @@
     "release": "standard-version"
   },
   "peerDependencies": {},
+  "keywords": [
+    "typescript",
+    "typing",
+    "transform",
+    "converter",
+    "json",
+    "interface",
+    "declaration",
+    "cli"
+  ],
   "husky": {
     "hooks": {
       "pre-commit": "tsdx lint",
