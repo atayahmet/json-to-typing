@@ -1,0 +1,77 @@
+{
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "bin": {
+    "json2typing": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build:tsdx": "tsdx build",
+    "build": "tsc --target es5 --module commonjs",
+    "test": "tsdx test --coverage",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "release": "standard-version"
+  },
+  "peerDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "prettier": {
+    "printWidth": 90,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "json-to-typing",
+  "author": "Ahmet ATAY",
+  "module": "dist/json-to-typing.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/json-to-typing.cjs.production.min.js",
+      "limit": "15 KB"
+    },
+    {
+      "path": "dist/json-to-typing.esm.js",
+      "limit": "15 KB"
+    }
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@size-limit/preset-small-lib": "^4.9.2",
+    "@types/json-to-ast": "^2.1.1",
+    "@types/type-detect": "^4.0.1",
+    "coveralls": "^3.1.0",
+    "husky": "^4.3.8",
+    "size-limit": "^4.9.2",
+    "standard-version": "^9.1.0",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.1.0",
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "json-to-ast": "^2.1.0",
+    "type-detect": "^4.0.8"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

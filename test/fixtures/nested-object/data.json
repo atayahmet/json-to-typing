@@ -1,0 +1,39 @@
+{
+  "isbn": "123-456-222",
+  "author": {
+    "lastname": "Doe",
+    "firstname": "Jane"
+  },
+  "editors": [
+    {
+      "id": 1,
+      "lastname": "Smith",
+      "firstname": "Jane",
+      "contact": {
+        "email": "smith@jane.com",
+        "address": {
+          "country": "US",
+          "city": "Florida"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "lastname": "John",
+      "firstname": "Doe",
+      "contact": {
+        "email": "john@doe.com",
+        "address": {
+          "country": "US",
+          "city": "Florida"
+        }
+      }
+    }
+  ],
+  "title": "The Ultimate Database Study Guide",
+  "category": [
+    "Non-Fiction",
+    "Technology"
+  ],
+  "isPublished": true
+}
